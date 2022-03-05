@@ -6,28 +6,29 @@
       <div class="main">
         <div class="list-button-con">
           <ul class="list-button">
-            <li>
-              <a href="http://alphatest.luckymeta.io?utm_source=tokenpocket"
+            <li @click="handleNft">
+              <!-- <a href="http://alphatest.luckymeta.io?utm_source=tokenpocket"
                 >NFT</a
-              >
+              > -->
+              <button>NFT</button>
             </li>
             <li @click="buyNowClick = true">
-              <a>BUY NOW</a>
+              <button>BUY NOW</button>
               <p v-if="buyNowClick" class="comming-soon">Comming soon</p>
             </li>
             <li @click="marketPriceClick = true">
-              <a class="market-price-button">
+              <button class="market-price-button">
                 <p class="market-price-text">Market Price</p>
                 <p class="dextool-text">DEXTOOLS.IO</p>
                 <div
                   class="market-price-text-con"
                   style="position: absolute"
                 ></div>
-              </a>
+              </button>
               <p v-if="marketPriceClick" class="comming-soon">Comming soon</p>
             </li>
             <li class="white-paper">
-              <a>White Paper</a>
+              <button>White Paper</button>
             </li>
           </ul>
         </div>
@@ -250,6 +251,12 @@ export default {
         $(".setting").addClass("trans-upfour");
       }
     },
+    handleNft() {
+      window.open(
+        "http://alphatest.luckymeta.io?utm_source=tokenpocket",
+        "_self"
+      );
+    },
   },
 };
 </script>
@@ -286,42 +293,41 @@ export default {
 }
 
 .main .list-button li {
-  height: 44px;
-  width: 190px;
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 33px;
-  text-align: center;
   padding-top: 13px;
   flex-grow: 1;
   margin: 0 12px;
   position: relative;
 }
 
-.main .list-button li a {
+.main .list-button li button {
+  height: 58px;
+  width: 190px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 33px;
+  text-align: center;
   color: #fff;
   font-size: 25px;
 }
 
-.main .list-button a .market-price-text {
+.main .list-button button .market-price-text {
   font-size: 30px;
-  margin-top: -12px;
 }
 
 .main .list-button .white-paper {
-  background: #fff;
 }
 
-.main .list-button .white-paper a {
+.main .list-button .white-paper button {
   color: #000;
+  background: #fff;
 }
 
 .main .list-button li .comming-soon {
   font-size: 20px;
   color: chartreuse;
   position: absolute;
-  top: 64px;
-  right: 47px;
+  top: 73px;
+  right: 57px;
 }
 
 .main .list {
