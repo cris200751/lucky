@@ -2,7 +2,7 @@
   <div class="index">
     <div class="setting">
       <Publicheader></Publicheader>
-      <fixedsocialnetwork />
+      <fixed-social-network />
       <div class="main">
         <div class="list-button-con">
           <ul class="list-button">
@@ -142,7 +142,7 @@
 </template>
 
 <script>
-import Fixedsocialnetwork from "./public/fixedsocialnetwork.vue";
+import FixedSocialNetwork from './public/FixedSocialNetwork.vue';
 import Publicfooter from "./public/footer";
 import Publicheader from "./public/header";
 import SocialNetwork from "./public/SocialNetwork.vue";
@@ -151,8 +151,8 @@ export default {
   components: {
     Publicfooter,
     Publicheader,
-    Fixedsocialnetwork,
     SocialNetwork,
+    FixedSocialNetwork,
   },
   data() {
     return {
